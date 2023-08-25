@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class WitzService {
 
   constructor(private http : HttpClient) { }
-  url = 'http://127.0.0.1:3000/witz/';
+  url = 'http://127.0.0.1:3000/api/jokes/';
   create(witz: any){
     return this.http.post( this.url + 'add' , witz);
   }
   getRandom(){
-    return this.http.get( this.url + 'getRandom/');
+    return this.http.get( this.url + 'random');
   }
 }

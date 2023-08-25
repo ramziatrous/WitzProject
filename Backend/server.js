@@ -4,11 +4,12 @@ dotenv.config();
 import connectDB from "./config/db.js";
 import { v4 as uuidv4 } from "uuid"; // Using UUID to generate unique IDs
 import { jokes } from "./data/jokes.js";
+import cors from "cors";
 
 const port = process.env.PORT || 3000;
 connectDB();
 const app = express();
-
+app.use(cors());
 app.use(express.json()); // Parse JSON request bodies
 
 app.get("/", (req, res) => {

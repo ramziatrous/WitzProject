@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit  {
     this._witz.getRandom().subscribe({
       next: (res) => {
         this.witz = res;
-        this.witztxt = this.witz[0].witztext;
+        console.log(this.witz);
+        this.witztxt = this.witz.jokeText;
       },
       error: (err) => {
         console.log(err);
@@ -27,14 +28,14 @@ export class HomeComponent implements OnInit  {
   }
 
     ok(){
-    this._witz.getRandom().subscribe({
-      next: (res) => {
-
-        this.witz = res;
-        this.witztxt = this.witz[0].witztext;
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });}
+      this._witz.getRandom().subscribe({
+        next: (res) => {
+          this.witz = res;
+          console.log(this.witz);
+          this.witztxt = this.witz.jokeText;
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });}
 }
