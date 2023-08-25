@@ -2,4 +2,4 @@
 
 ng new spaßvogel 24.08.2023 components (navbar) erstelt und bearbeitet
 
- ng g c navbar mit Frontend entwickler in zusammenarbeit bearbeitet 25.08.2023
+ ng g c navbar mit Frontend entwickler Rsmzi in zusammenarbeit bearbeitet 25.08.2023
