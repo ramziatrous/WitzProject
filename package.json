@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.4.4",
@@ -15,7 +16,11 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": " concurrently \"npm run server\" \"npm run client\" "
+    "dev": " concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node backend/importData.js",
+    "data:destroy": "node backend/importData.js -d"
+
+
   },
   "repository": {
     "type": "git",
