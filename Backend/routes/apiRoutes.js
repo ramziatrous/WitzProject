@@ -1,4 +1,3 @@
-// routes/apiRoutes.js
 import express from "express";
 import * as jokesController from "../controllers/jokesController.js";
 

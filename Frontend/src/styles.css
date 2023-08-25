@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+body {
+    font-family: var(--font-family);
+    background-color: antiquewhite;
+}
+=======
 /* You can add global styles to this file, and also import other style files */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
@@ -16,3 +25,4 @@ body {
    
   }
   
+>>>>>>> fc8dbe7735317c426b92c6ddc218505b67b81aba

@@ -1,16 +1,25 @@
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+import connectDB from "./config/db.js";
 import { v4 as uuidv4 } from "uuid"; // Using UUID to generate unique IDs
 import { jokes } from "./data/jokes.js";
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
+connectDB();
 const app = express();
 
 app.use(express.json()); // Parse JSON request bodies
 
 app.get("/", (req, res) => {
   res.send("API is running ...");
+});
+
+// Get a random joke
+app.get("/api/jokes/random", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * jokes.length);
+  const randomJoke = jokes[randomIndex];
+  res.json(randomJoke);
 });
 
 // Get all jokes
@@ -28,7 +37,6 @@ app.get("/api/jokes/:id", (req, res) => {
   res.json(joke);
 });
 
-// Add a new joke
 // Add a new joke
 app.post("/api/jokes", (req, res) => {
   const newJoke = {
