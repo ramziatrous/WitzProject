@@ -13,4 +13,4 @@ ng g c footer
 ng g s services/witz
 verbindung zwischen frontend und backend
 ramdom witz aus die db abgeholt und auf main page gezeigt
-function erstellt da die näste witz zu holen
+function erstellt da die nächste witz zu holen
