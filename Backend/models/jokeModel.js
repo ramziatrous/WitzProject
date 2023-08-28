@@ -10,4 +10,4 @@ const jokeSchema = new mongoose.Schema({
 
 const Joke = mongoose.model("Joke", jokeSchema);
 
-export default Joke;
+export { Joke };

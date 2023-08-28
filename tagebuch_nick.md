@@ -15,12 +15,13 @@ Routen in separate Dateien ausgelagert, um die Codebasis übersichtlicher zu ges
 Ein Modell für die Datenbank erstellt, um die Struktur der gespeicherten Daten zu definieren.
 Controller erstellt, um die Logik für die CRUD-Operationen von den Routen zu trennen und besser zu organisieren.
 
-### Wochenende ###
-### 26.August ####
-### 27.August ####
+### Wochenende
+
+### 26.August
+
+### 27.August
 
 Tag 3 - 28. August 2023:
-To DO -->
 
 - MongoDB Atlas/Compass Setup
 - Connect with mongoose
