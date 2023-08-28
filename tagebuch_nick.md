@@ -28,6 +28,23 @@ Tag 3 - 28. August 2023:
 - Connection mit DB mit server.js ?
 - neue Route UPDATE/PUT um Bewertung zu aktualisieren
 
+Neue Ordner Struktur -->
+
+├── backend
+│ ├── config
+│ │ └── db.js
+│ ├── controllers
+│ │ └── jokesController.js
+│ ├── middlewares
+│ │ ├── errorHandlers.js
+│ │ └── requestLogger.js
+│ ├── models
+│ │ ├── jokeModel.js
+│ │ ├── userModel.js
+│ ├── routes
+│ │ └── apiRoutes.js
+│ ├── server.js
+
 Tag 4 - 29. August 2023:
 To DO -->
 

@@ -12,7 +12,7 @@ const getAllJokes = async (req, res) => {
 };
 
 const getRandomJoke = async (req, res) => {
-  // Corrected function name "getRandomJoke"
+  
   try {
     const count = await Joke.countDocuments(); // Get the total number of jokes in the database
     const randomIndex = Math.floor(Math.random() * count); // Generate a random index
