@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import colors from "colors";
-import { jokes } from "./data/jokes.js";
+import { germanJokes } from "./data/jokes.js";
+import { Joke } from "./models/jokeModel.js"; // Import named export
 
-import Joke from "./models/jokeModel.js";
 import connectDB from "./config/db.js";
 
 dotenv.config();
@@ -16,7 +16,7 @@ const importData = async () => {
   try {
     await Joke.deleteMany();
 
-    const sampleJokes = jokes.map((joke) => {
+    const sampleJokes = germanJokes.map((joke) => {
       return { ...joke };
     });
 
