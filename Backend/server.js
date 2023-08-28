@@ -1,28 +1,40 @@
 import express from "express";
 import dotenv from "dotenv";
-dotenv.config();
+import cors from "cors";
 import connectDB from "./config/db.js";
 import { router } from "./routes/apiRoutes.js";
-import cors from "cors";
+
+dotenv.config();
 const port = process.env.PORT || 3000;
-connectDB();
+
+// Initialize the Express app
 const app = express();
 
-// CORS-Konfiguration hinzufügen
+// Connect to the database
+connectDB();
+
+// CORS Middleware activation
+app.use(cors());
+
+// Middleware for JSON parsing
+app.use(express.json());
+
+// Custom middleware for logging requests
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  console.log("Request Body:", req.body);
   next();
 });
 
-app.use(express.json());
+// Use the API routes defined in apiRoutes.js
 app.use("", router);
 
-// CORS-Middleware aktivieren
-app.use(cors());
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: "Internal Server Error" });
+});
 
-app.listen(port, () => console.log(`Server running 🏃 on port ${port}`));
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running 🏃 on port ${port}`);
+});
