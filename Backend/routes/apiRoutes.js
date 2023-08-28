@@ -8,7 +8,7 @@ router.use(logRequest);
 
 router.get("/jokes", jokesController.getAllJokes); // getAllJokes function
 router.post("/jokes", jokesController.addNewJoke); // addNewJoke function
-// router.put("/jokes/:id", jokesController.updateJoke);
+router.put("/jokes/:id", jokesController.updateJokeRating);
 router.get("/jokes/random", jokesController.getRandomJoke);
 
 router.get("/trigger-error", (req, res, next) => {

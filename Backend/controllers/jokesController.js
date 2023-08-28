@@ -44,4 +44,28 @@ const addNewJoke = async (req, res) => {
   }
 };
 
-export { getAllJokes, getRandomJoke, addNewJoke }; // Export the controller functions
+const updateJokeRating = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rating } = req.body;
+
+    const updatedJoke = await Joke.findByIdAndUpdate(
+      id,
+      { rating, updatedAt: new Date() },
+      { new: true }
+    );
+
+    if (!updatedJoke) {
+      return res.status(404).json({ message: "Joke not found" });
+    }
+
+    res.json(updatedJoke);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error updating joke rating" });
+  }
+};
+
+export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating };
+
+
