@@ -25,7 +25,8 @@ Tag 3 - 28. August 2023:
 
 - MongoDB Atlas/Compass Setup
 - Connect with mongoose
-- Connection mit DB mit server.js ? if yes -->
+- Connection mit DB mit server.js ?
+- neue Route UPDATE/PUT um Bewertung zu aktualisieren
 
 Tag 4 - 29. August 2023:
 To DO -->
