@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit  {
     this._witz.getRandom().subscribe({
       next: (res) => {
         this.witz = res;
-        console.log(this.witz);
+
         this.witztxt = this.witz.jokeText;
       },
       error: (err) => {

@@ -5,9 +5,9 @@ body {
     font-family: var(--font-family);
 
 
-    background-image: url(https://media.discordapp.net/attachments/1060751573002768464/1143978287786360972/5784c6b5-7d9e-4ddc-9c00-180469a2bb36.jpg);
-    background-size: cover;
-    background-position: center center;
+    background-image: url(./assets/bg.png);
+    background-size: 100%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;

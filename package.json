@@ -19,8 +19,6 @@
     "dev": " concurrently \"npm run server\" \"npm run client\" ",
     "data:import": "node backend/importData.js",
     "data:destroy": "node backend/importData.js -d"
-
-
   },
   "repository": {
     "type": "git",
