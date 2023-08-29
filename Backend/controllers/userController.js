@@ -4,7 +4,8 @@ import { User } from "../models/userModel.js";
 //@route POST users/login
 //@access Public
 const authUser = async (req, res) => {
-  const { email, passwort } = req.body;
+  const { email, password } = req.body;
+
   try {
     const user = await User.findOne({ email });
 
