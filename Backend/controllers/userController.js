@@ -5,11 +5,12 @@ import { User } from "../models/userModel.js";
 //@access Public
 const authUser = async (req, res) => {
   const { email, password } = req.body;
+  console.log({ email, password });
 
   try {
     const user = await User.findOne({ email });
 
-    if (user && (await user.matchPassword(passwort))) {
+    if (user && (await user.matchPassword(password))) {
       res.json({
         _id: user._id,
         name: user.name,

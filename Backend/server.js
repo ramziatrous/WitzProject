@@ -1,3 +1,4 @@
+import bodyParser from "body-parser";
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -12,6 +13,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // Body parser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
