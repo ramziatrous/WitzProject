@@ -9,12 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Top10Component } from './top10/top10.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { RatingModule } from 'primeng/rating';
+
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    AngularEditorModule,
+    ReactiveFormsModule,
+    RatingModule,
 
   ],
   providers: [],

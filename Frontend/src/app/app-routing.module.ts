@@ -6,10 +6,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { Top10Component } from './top10/top10.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AuthGuard } from './Services/auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home' , component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile',canActivate: [AuthGuard], component: ProfileComponent },
   { path: 'top10', component: Top10Component },
 
   { path: 'login', component: LoginComponent },
