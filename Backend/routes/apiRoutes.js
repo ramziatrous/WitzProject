@@ -5,11 +5,13 @@ import { logRequest } from "../middlewares/requestLogger.js";
 const router = express.Router();
 
 router.use(logRequest);
+//Jokes routes
+router.get("/getall", jokesController.getAllJokes); // getAllJokes function
+router.post("/create", jokesController.addNewJoke); // addNewJoke function
+router.put("/update/:id", jokesController.updateJokeRating);
+router.get("/random", jokesController.getRandomJoke);
 
-router.get("/jokes", jokesController.getAllJokes); // getAllJokes function
-router.post("/jokes", jokesController.addNewJoke); // addNewJoke function
-router.put("/jokes/:id", jokesController.updateJokeRating);
-router.get("/jokes/random", jokesController.getRandomJoke);
+//USER  routes
 
 router.get("/trigger-error", (req, res, next) => {
   try {
