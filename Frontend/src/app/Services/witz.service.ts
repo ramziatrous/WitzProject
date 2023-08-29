@@ -17,4 +17,7 @@ export class WitzService {
   getRandom(){
     return this.http.get( this.url + 'random');
   }
+  getall(){
+    return this.http.get( this.url + 'getall');
+  }
 }

@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   witz={
     jokeText:'',
     rating: '0',
-    count:'0',
+    count:'1',
     idUser:'12345',
     createdAt: new Date(),
     updatedAt: new Date(),
