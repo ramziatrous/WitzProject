@@ -11,11 +11,26 @@ const getAllJokes = async (req, res) => {
   }
 };
 
+const usedJokes = new Set(); // Set to keep track of used jokes
+
 const getRandomJoke = async (req, res) => {
   try {
     const count = await Joke.countDocuments(); // Get the total number of jokes in the database
-    const randomIndex = Math.floor(Math.random() * count); // Generate a random index
-    const randomJoke = await Joke.findOne().skip(randomIndex); // Find a random joke by skipping randomIndex jokes
+
+    if (usedJokes.size === count) {
+      // All jokes have been used, reset the usedJokes set
+      usedJokes.clear();
+    }
+
+    let randomIndex;
+    let randomJoke;
+
+    do {
+      randomIndex = Math.floor(Math.random() * count); // Generate a random index
+      randomJoke = await Joke.findOne().skip(randomIndex); // Find a random joke by skipping randomIndex jokes
+    } while (usedJokes.has(randomJoke._id)); // Check if the joke has been used before
+
+    usedJokes.add(randomJoke._id); // Mark the joke as used
     res.json(randomJoke);
   } catch (err) {
     console.error(err);
