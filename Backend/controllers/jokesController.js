@@ -40,11 +40,14 @@ const getRandomJoke = async (req, res) => {
 
 const addNewJoke = async (req, res) => {
   try {
-    const { jokeText, rating } = req.body;
-
+    const { jokeText, idUser } = req.body;
+    let rating = "0";
+    let count = "0";
     const newJoke = new Joke({
       jokeText,
       rating,
+      count,
+      idUser,
       createdAt: new Date(),
       updatedAt: new Date(),
     });
