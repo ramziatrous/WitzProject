@@ -1,1 +1,7 @@
-
+<div class="center-container">
+  <p>Füge deinen Witz hinzu</p>
+  <div class="global">
+    <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="witz.jokeText"></angular-editor>
+  </div>
+  <button pButton pRipple label="Submit" class="p-button-success" (click)="submit()"></button>
+</div>

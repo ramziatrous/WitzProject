@@ -1,6 +1,6 @@
 <div class="center-container">
-  <div class="joke"><p>{{ witztxt }}</p></div>
-
+  <div class="joke"><p innerHTML="{{witztxt}}"></p></div>
+  <p-rating [(ngModel)]="value" [cancel]="false"></p-rating><br />
   <button pButton pRipple label="Next" class="p-button-success" (click)="ok()"></button>
 </div>
 

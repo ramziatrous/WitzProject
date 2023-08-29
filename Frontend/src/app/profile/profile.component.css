@@ -1,0 +1,11 @@
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Adjust as needed */
+}
+
+.global {
+  margin-top: 10px; /* Add some spacing between elements */
+}
