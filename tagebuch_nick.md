@@ -28,7 +28,20 @@ Tag 3 - 28. August 2023:
 - Connection mit DB mit server.js ?
 - neue Route UPDATE/PUT um Bewertung zu aktualisieren
 
-Neue Ordner Struktur -->
+─ server.js
+
+Tag 4 - 29. August 2023:
+
+- Modeling Data, Controller & Routes für USER
+- User Email & Passwort Validation
+
+Tag 5 - 30. August 2023:
+
+- JSON WebToken
+- Auth Middleware & Endpoint
+- Logout User & Clear Cookie
+
+Ordner Struktur -->
 
 ├── backend
 │ ├── config
@@ -43,11 +56,18 @@ Neue Ordner Struktur -->
 │ │ ├── userModel.js
 │ ├── routes
 │ │ └── apiRoutes.js
-│ ├── server.js
+│ ├─
 
-Tag 4 - 29. August 2023:
-To DO -->
+User Routen Overview :
 
-- Modeling Data für JOKES
-- Modeling Data für USER
-- Seeding Sample data, Script schreiben um die Witze in die Database zu pushen
+authUser: Handles user authentication and token generation.
+registerUser: Handles user registration.
+logoutUser: Handles user logout and clearing cookies.
+updateUserProfile: Updates the user's profile information.
+
+getUserProfile: Retrieves the authenticated user's profile based on their ID.
+
+getUserByID: Retrieves a specific user by their ID (admin access).
+getUsers: Retrieves a list of users (admin access).
+deleteUser: Deletes a user by their ID (admin access).
+updateUser: Updates a user by their ID (admin access).

@@ -15,17 +15,41 @@ console.log(" 🧑  verifying user data...");
 
 connectDB();
 
-const importData = async () => {
+const insertData = async () => {
   try {
-    await Joke.deleteMany();
-    await User.deleteMany();
+    const existingJokeIds = await Joke.distinct("_id");
+    const existingUserEmails = await User.distinct("email");
 
-    const sampleJokes = germanJokes.map((joke) => ({ ...joke }));
+    const newJokes = germanJokes.filter(
+      (joke) => !existingJokeIds.includes(joke._id)
+    );
+    const newUsers = users.filter(
+      (user) => !existingUserEmails.includes(user.email)
+    );
 
-    await Joke.insertMany(sampleJokes);
-    await User.insertMany(users);
+    if (newJokes.length === 0 && newUsers.length === 0) {
+      console.log("No new data to insert.");
+      process.exit();
+    }
 
-    console.log("Data Imported".green.inverse);
+    if (newJokes.length > 0) {
+      const createdJokes = await Joke.insertMany(newJokes);
+      console.log(`${createdJokes.length} new jokes inserted.`);
+    }
+
+    if (newUsers.length > 0) {
+      const createdUsers = await User.insertMany(newUsers);
+
+      // Create admin user only if it doesn't exist
+      if (!existingUserEmails.includes("admin@email.com")) {
+        const adminUser = createdUsers[0]._id;
+        console.log(`${createdUsers.length} new users inserted.`);
+      } else {
+        console.log("Admin user already exists.");
+      }
+    }
+
+    console.log("Data Inserted".green.inverse);
     process.exit();
   } catch (error) {
     console.error(`Error: ${error.message}`.red.inverse);
@@ -33,4 +57,4 @@ const importData = async () => {
   }
 };
 
-importData();
+insertData();
