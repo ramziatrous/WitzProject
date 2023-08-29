@@ -12,7 +12,6 @@ const getAllJokes = async (req, res) => {
 };
 
 const getRandomJoke = async (req, res) => {
-  
   try {
     const count = await Joke.countDocuments(); // Get the total number of jokes in the database
     const randomIndex = Math.floor(Math.random() * count); // Generate a random index
@@ -51,7 +50,8 @@ const updateJokeRating = async (req, res) => {
 
     const updatedJoke = await Joke.findByIdAndUpdate(
       id,
-      { rating, updatedAt: new Date() },
+      { $set: { rating, updatedAt: new Date() }, $inc: { count: 1 } },
+
       { new: true }
     );
 
@@ -67,5 +67,3 @@ const updateJokeRating = async (req, res) => {
 };
 
 export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating };
-
-
