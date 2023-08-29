@@ -15,7 +15,8 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use("", router);
+app.use("/jokes", router);
+app.use("/user", router);
 app.use(notFound);
 app.use(errorHandler);
 
