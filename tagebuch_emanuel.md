@@ -14,3 +14,4 @@ vorbereitung auf morgen wo ich für das frontend css code schreiben möchte
 
  23.08.2023 angular projekt erstelt und gepusht auf github repository
 
+SpaVogel Team (Emanuel, Ramzi, Nick)
