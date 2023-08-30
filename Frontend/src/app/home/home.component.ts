@@ -10,17 +10,24 @@ export class HomeComponent implements OnInit  {
   witz: any;
   witztxt: any;
   value:any;
+  nr:any;
+  avg: any;
+  newrating={
+    "rating":''
+            };
+
 
   constructor(private _witz: WitzService) { }
 
   ngOnInit(): void {
 
+
     this._witz.getRandom().subscribe({
       next: (res) => {
         this.witz = res;
-
         this.witztxt = this.witz.jokeText;
-        this.value = (this.witz.rating+1)/(this.witztxt.count+1);
+        this.avg=parseInt(this.witz.rating)/parseInt(this.witz.count);
+        this.value = this.avg;
       },
       error: (err) => {
         console.log(err);
@@ -30,18 +37,40 @@ export class HomeComponent implements OnInit  {
   }
 
     ok(){
+      if(this.value!=this.avg){
+      this.nr = parseInt(this.value)+parseInt(this.witz.rating);
+      this.newrating.rating=this.nr;
+    this._witz.update( this.witz._id ,this.newrating ).subscribe({
+      next: (res) => {
+
+
+      },
+      error: (err) => {
+        console.log(err);
+
+      }
+    });}
+
+
       this._witz.getRandom().subscribe({
         next: (res) => {
           this.witz = res;
-          console.log(this.witz);
           this.witztxt = this.witz.jokeText;
-          this.value=0;
+          this.avg=parseInt(this.witz.rating)/parseInt(this.witz.count);
+          this.value = this.avg;
+
+
         },
         error: (err) => {
           console.log(err);
         }
 
-      })
-      this._witz.update( this.witz._id ,this.value ).subscribe({});
-      ;}
+      });
+
+
+
+
+    }
+
+
 }

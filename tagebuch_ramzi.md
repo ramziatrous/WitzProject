@@ -25,4 +25,9 @@ ng g c top10
 ng g s services/auth
 routes configurieren da die link von navbar navigate zu die rechtigen seiten
 Html und css von login , register seiten fertig
-
+29.08.2023
+-bewertung function und Html erstllt
+-top10 function und Html erstellt
+-verbundung die update und getall endpoint api mit frontend im service
+-testing die bewertungs system
+-test die top10 witzen
