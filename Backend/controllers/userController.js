@@ -8,31 +8,30 @@ const authUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
+    // Find the user with the given email in the database
     const user = await User.findOne({ email });
 
+    // Check if the user exists and if the provided password matches
     if (user && (await user.matchPassword(password))) {
-      const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
-        expiresIn: "30d",
-      });
-
-      // Set JWT as HTTP-Only cookie
-      res.cookie("jwt", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV !== "development",
-        sameSite: "strict",
-        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 Days
-      });
-
-      res.json({
-        _id: user._id,
+      // Create a payload for the JWT containing user information
+      const payload = {
         username: user.username,
         email: user.email,
         isAdmin: user.isAdmin,
-      });
+        image: user.image,
+      };
+
+      // Sign the payload to generate a JWT token
+      const token = jwt.sign(payload, "123456");
+
+      // Send the token in the response
+      res.status(200).send({ mytoken: token });
     } else {
+      // Return an error response if authentication fails
       res.status(401).json({ message: "Invalid email or password 👨‍🦲" });
     }
   } catch (error) {
+    // Handle server errors
     res.status(500).json({ message: "Server error" });
   }
 };
