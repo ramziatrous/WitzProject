@@ -1,6 +1,6 @@
-import bodyParser from "body-parser";
 import express from "express";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser"; // Corrected import
 import cors from "cors";
 import connectDB from "./config/db.js";
 import { router } from "./routes/apiRoutes.js";
@@ -12,10 +12,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-// Body parser Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
+// Remove redundant bodyParser import and usage
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Cookie parser Middleware
+app.use(cookieParser());
 
 connectDB();
 app.use(cors());
