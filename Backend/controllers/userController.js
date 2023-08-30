@@ -3,11 +3,10 @@ import jwt from "jsonwebtoken";
 import multer from "multer";
 import path from "path";
 
-// Configure multer for file uploads
+// Konfigurieren Sie multer für Datei-Uploads
 const storage = multer.diskStorage({
-  destination: "uploads/", // Specify the folder where files will be stored
+  destination: "uploads/", // Ordner, in dem Dateien gespeichert werden
   filename: function (req, file, cb) {
-    // Define the file name (you can modify this as needed)
     cb(
       null,
       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
@@ -61,38 +60,43 @@ const registerUser = async (req, res) => {
   // Handle file upload using multer
   upload.single("image")(req, res, async function (err) {
     if (err) {
+      console.error("File upload error:", err);
       return res.status(500).json({ message: "File upload error" });
     }
+
+    // Überprüfen Sie, ob die req.file-Informationen verfügbar sind
+    console.log("Uploaded file:", req.file);
 
     const imageFileName = req.file ? req.file.filename : "default.jpg"; // Get the uploaded file name or set default
 
     const userExists = await User.findOne({ email });
 
     if (userExists) {
-      res.status(400).json({ message: "User already exists" });
-    } else {
-      try {
-        const user = await User.create({
-          username,
-          email,
-          password,
-          image: imageFileName, // Save the image file name in the database
-        });
+      return res.status(400).json({ message: "User already exists" });
+    }
 
-        if (user) {
-          res.status(201).json({
-            _id: user._id,
-            username: user.username,
-            email: user.email,
-            isAdmin: user.isAdmin,
-            image: user.image,
-          });
-        } else {
-          res.status(400).json({ message: "Invalid user data" });
-        }
-      } catch (error) {
-        res.status(500).json({ message: "Server error" });
+    try {
+      const user = await User.create({
+        username,
+        email,
+        password,
+        image: imageFileName, // Save the image file name in the database
+      });
+
+      if (user) {
+        return res.status(201).json({
+          _id: user._id,
+          username: user.username,
+          email: user.email,
+          isAdmin: user.isAdmin,
+          image: user.image,
+        });
+      } else {
+        return res.status(400).json({ message: "Invalid user data" });
       }
+    } catch (error) {
+      console.error("Server error:", error);
+      return res.status(500).json({ message: "Server error" });
     }
   });
 };

@@ -7,6 +7,9 @@ const userRouter = express.Router();
 
 userRouter.use(logRequest);
 
+
+
+
 // Public routes
 userRouter.post("/register", userController.registerUser);
 userRouter.post("/login", userController.authUser);
