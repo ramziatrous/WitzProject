@@ -13,7 +13,7 @@ router.get("/random", jokesController.getRandomJoke);
 router.post("/create", jokesController.addNewJoke);
 router.put("/update/:id", jokesController.updateJokeRating);
 router.put("/updatetext/:id", jokesController.updatetext); // update joketext
-router.delete("/delete", jokesController.deleteJoke);
+router.delete("/delete/:id", jokesController.deleteJoke);
 
 //USER  routes
 
