@@ -11,16 +11,14 @@ const getAllJokes = async (req, res) => {
   }
 };
 
-const getById = async (req,res)=>{
-  try{
-     
-      let result = await Joke.findById({_id: req.params.id});
-      res.status(200).send(result);
+const getById = async (req, res) => {
+  try {
+    let result = await Joke.findById({ _id: req.params.id });
+    res.status(200).send(result);
+  } catch (error) {
+    res.status(500).send(error);
   }
-  catch(error) {
-      res.status(500).send(error);
-  }
-}
+};
 
 const usedJokes = new Set(); // Set to keep track of used jokes
 
@@ -53,7 +51,7 @@ const addNewJoke = async (req, res) => {
   try {
     const { jokeText, idUser } = req.body;
     let rating = "0";
-    let count = "0";
+    let count = "1";
     const newJoke = new Joke({
       jokeText,
       rating,
@@ -97,7 +95,7 @@ const updateJokeRating = async (req, res) => {
   }
 };
 
- // Update Joke Text 
+// Update Joke Text
 
 const updatetext = async (req, res) => {
   try {
@@ -124,14 +122,20 @@ const updatetext = async (req, res) => {
 
 // Delete a joke
 const deleteJoke = async (req, res) => {
-  try{
-     
-      let result = await Joke.findByIdAndDelete({_id: req.params.id});
-      res.status(200).send(result);
+  try {
+    let result = await Joke.findByIdAndDelete({ _id: req.params.id });
+    res.status(200).send(result);
+  } catch (error) {
+    res.status(500).send(error);
   }
-  catch(error) {
-      res.status(500).send(error);
-  }
-}
+};
 
-export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating,getById , updatetext, deleteJoke };
+export {
+  getAllJokes,
+  getRandomJoke,
+  addNewJoke,
+  updateJokeRating,
+  getById,
+  updatetext,
+  deleteJoke,
+};
