@@ -2,9 +2,6 @@ import { User } from "../models/userModel.js";
 
 import jwt from "jsonwebtoken";
 
-
-
-
 const getAll = async (req, res) => {
   try {
     const users = await User.find();
@@ -18,54 +15,43 @@ const getAll = async (req, res) => {
 //@route POST users/register
 //@access Public
 
-
-
-
-  const registerUser = async (req, res) => {
-    try {
-      let data = req.body;
-      if (req.file) {
-        data.image = req.file.filename;
-      }
-      
-      const userExists = await User.findOne({ email: data.email });
-  
-      if (userExists) {
-        return res.status(400).json({ message: "User already exists" });
-      }
-  
-      const user = new User({
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        image: data.image,
-      });
-  
-      const savedUser = await user.save();
-  
-      if (savedUser) {
-        res.status(201).json({
-          _id: savedUser._id,
-          username: savedUser.username,
-          email: savedUser.email,
-          isAdmin: savedUser.isAdmin,
-          image: savedUser.image,
-        });
-       
-      } else {
-        res.status(400).json({ message: "Invalid user data" });
-      }
-    } catch (error) {
-      res.status(500).json({ message: "Server error" });
-      
+const registerUser = async (req, res) => {
+  try {
+    let data = req.body;
+    if (req.file) {
+      data.image = req.file.filename;
     }
-  };
 
+    const userExists = await User.findOne({ email: data.email });
 
+    if (userExists) {
+      return res.status(400).json({ message: "User already exists" });
+    }
 
+    const user = new User({
+      username: data.username,
+      email: data.email,
+      password: data.password,
+      image: data.image,
+    });
 
+    const savedUser = await user.save();
 
-
+    if (savedUser) {
+      res.status(201).json({
+        _id: savedUser._id,
+        username: savedUser.username,
+        email: savedUser.email,
+        isAdmin: savedUser.isAdmin,
+        image: savedUser.image,
+      });
+    } else {
+      res.status(400).json({ message: "Invalid user data" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 //@desc Auth user & get token
 //@route POST users/login
@@ -86,11 +72,11 @@ const authUser = async (req, res) => {
         email: user.email,
         isAdmin: user.isAdmin,
         image: user.image,
-        _id: user._id
+        _id: user._id,
       };
 
       // Sign the payload to generate a JWT token
-      const token = jwt.sign(payload, "123456");
+      const token = jwt.sign(payload, process.env.JWT_SECRET);
 
       // Send the token in the response
       res.status(200).json({ mytoken: token });
@@ -116,4 +102,4 @@ const logoutUser = async (req, res) => {
   }
 };
 
-export { authUser, registerUser, logoutUser,getAll };
+export { authUser, registerUser, logoutUser, getAll };

@@ -72,6 +72,8 @@ const addNewJoke = async (req, res) => {
   }
 };
 
+// Update Joke Rating
+
 const updateJokeRating = async (req, res) => {
   try {
     const { id } = req.params;
@@ -94,6 +96,8 @@ const updateJokeRating = async (req, res) => {
     res.status(500).json({ message: "Error updating joke rating" });
   }
 };
+
+ // Update Joke Text 
 
 const updatetext = async (req, res) => {
   try {
@@ -118,4 +122,16 @@ const updatetext = async (req, res) => {
   }
 };
 
-export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating,getById , updatetext };
+// Delete a joke
+const deleteJoke = async (req, res) => {
+  try{
+     
+      let result = await Joke.findByIdAndDelete({_id: req.params.id});
+      res.status(200).send(result);
+  }
+  catch(error) {
+      res.status(500).send(error);
+  }
+}
+
+export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating,getById , updatetext, deleteJoke };
