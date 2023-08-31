@@ -1,20 +1,66 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable ,OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  userData: any;
+  constructor(private http:HttpClient ,private router:Router) { }
 
-  constructor() { }
+  private url = 'http://127.0.0.1:3000/users/';
+
+  ngOnInit(): void {
+    this.userData=this.getDataFromToken();
+  }
+
+  register(user:any){
+    return this.http.post(this.url + 'register', user);
+  }
+
+  login(user:any){
+    return this.http.post(this.url + 'login', user);
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate(['/home']);
+  }
+
   isLoggedIn(){
 
     let token = localStorage.getItem('token');
+
     if(token){
       return true;
     }else{
       return false;
-
     }
 
+  }
+
+  isAdmin() {
+    if(this.userData.isAdmin == true){
+      return true
+    }
+    else{
+      return false
+    }
+  }
+
+  getDataFromToken(){
+
+    let token = localStorage.getItem('token');
+
+    if(token){
+      let cryptedData = token.split('.')[1];
+      let decryptedData = window.atob(cryptedData);
+      let objectData = JSON.parse( decryptedData );
+      return objectData
+
+
+
+    }
   }
 }

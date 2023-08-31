@@ -17,6 +17,8 @@ import { Top10Component } from './top10/top10.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { RatingModule } from 'primeng/rating';
+import { AdminComponent } from './admin/admin.component';
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -30,7 +32,9 @@ import { RatingModule } from 'primeng/rating';
     RegisterComponent,
     ProfileComponent,
     Top10Component,
-    NotfoundComponent
+    NotfoundComponent,
+    AdminComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

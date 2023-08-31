@@ -11,6 +11,17 @@ const getAllJokes = async (req, res) => {
   }
 };
 
+const getById = async (req,res)=>{
+  try{
+     
+      let result = await Joke.findById({_id: req.params.id});
+      res.status(200).send(result);
+  }
+  catch(error) {
+      res.status(500).send(error);
+  }
+}
+
 const usedJokes = new Set(); // Set to keep track of used jokes
 
 const getRandomJoke = async (req, res) => {
@@ -84,4 +95,27 @@ const updateJokeRating = async (req, res) => {
   }
 };
 
-export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating };
+const updatetext = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { jokeText } = req.body;
+
+    const updatedJoke = await Joke.findByIdAndUpdate(
+      id,
+      { jokeText, updatedAt: new Date() },
+
+      { new: true }
+    );
+
+    if (!updatedJoke) {
+      return res.status(404).json({ message: "Joke not found" });
+    }
+
+    res.json(updatedJoke);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error updating joke rating" });
+  }
+};
+
+export { getAllJokes, getRandomJoke, addNewJoke, updateJokeRating,getById , updatetext };

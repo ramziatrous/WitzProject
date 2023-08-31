@@ -3,9 +3,12 @@
   flex-direction: column;
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  height: 100vh; /* Adjust as needed */
+  height: 70vh; /* Adjust as needed */
 }
 
 .global {
   margin-top: 10px; /* Add some spacing between elements */
+}
+img{
+  border-radius: 50% ;
 }

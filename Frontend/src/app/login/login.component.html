@@ -9,11 +9,11 @@
 
       <form class="field" >
 
-          <input  name="email" type="email" placeholder="E-mail" Class="">
+          <input [(ngModel)]="user.email" name="email" type="email" placeholder="E-mail" Class="">
 
-          <input  name="password"type="password" placeholder="Password" Class="mt-3"  >
+          <input [(ngModel)]="user.password"  name="password"type="password" placeholder="Password" Class="mt-3"  >
 
-          <button   class="" >Login</button>
+          <button   class="" (click)="login()">Login</button>
 
          <span class="link">Not a member? &nbsp;</span><a routerLink="/register" class="">Signup now</a>
       </form>

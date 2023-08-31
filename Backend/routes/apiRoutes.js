@@ -7,6 +7,8 @@ const router = express.Router();
 router.use(logRequest);
 //Jokes routes
 router.get("/getall", jokesController.getAllJokes); // getAllJokes function
+router.get("/getbyid/:id", jokesController.getById);
+router.put("/updatetext/:id", jokesController.updatetext);
 router.post("/create", jokesController.addNewJoke); // addNewJoke function
 router.put("/update/:id", jokesController.updateJokeRating);
 router.get("/random", jokesController.getRandomJoke);

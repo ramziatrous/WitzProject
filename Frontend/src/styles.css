@@ -16,3 +16,10 @@ body {
 
 
   }
+  @media (max-width: 768px) {
+    body {
+        /* Adjust font size or other styles for better mobile readability */
+        font-size: 16px;
+        background-size: cover; /* Adjust background size for better mobile appearance */
+    }
+}

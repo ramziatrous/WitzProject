@@ -20,4 +20,13 @@ export class WitzService {
   getall(){
     return this.http.get( this.url + 'getall');
   }
+  getById( id: any ){
+    return this.http.get( this.url + 'getbyid/' + id );
+  }
+  updatewitz(id: any,newtxt: any){
+    return this.http.put( this.url + 'updatetext/'+ id , newtxt);
+}
+  delete( id: any ){
+    return this.http.delete( this.url + 'delete/' + id );
+}
 }

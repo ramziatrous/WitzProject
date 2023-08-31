@@ -7,6 +7,9 @@ import { Top10Component } from './top10/top10.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AuthGuard } from './Services/auth.guard';
+import { AdminComponent } from './admin/admin.component';
+import { UpdateComponent } from './update/update.component';
+import { adminGuard } from './Services/admin.guard';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home' , component: HomeComponent },
@@ -17,6 +20,8 @@ const routes: Routes = [
 
   { path: 'register', component: RegisterComponent },
 
+{ path: 'admin', component: AdminComponent},
+{ path: 'update/:id', component: UpdateComponent},
   { path: '**' , component: NotfoundComponent }
 ];
 

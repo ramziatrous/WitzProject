@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { WitzService } from '../Services/witz.service';
+import { AuthService } from '../Services/auth.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-profile',
@@ -13,17 +14,21 @@ export class ProfileComponent implements OnInit {
     jokeText:'',
     rating: '0',
     count:'1',
-    idUser:'12345',
+    idUser:'',
     createdAt: new Date(),
     updatedAt: new Date(),
   }
-  constructor(private _witz: WitzService) { }
+  userData: any;
+  constructor(private _witz: WitzService,private _auth:AuthService) { }
 
   ngOnInit(): void {
-
-
+    this.userData = this._auth.getDataFromToken();
+console.log(this.userData);
 }
 submit(){
+
+ this.witz.idUser = this.userData.username;
+
 this._witz.create( this.witz ).subscribe({
   next: (res)=>{
     Swal.fire({
@@ -46,6 +51,6 @@ this._witz.create( this.witz ).subscribe({
   }
 })
 
-
 }
+
 }

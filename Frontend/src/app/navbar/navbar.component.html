@@ -13,13 +13,16 @@
           <a class="nav-link active text-light" routerLink="/register">Register</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active text-light" routerLink="/admin">Witze</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active text-light" routerLink="/top10">Top10Witze</a>
         </li>
         <li class="nav-item active text-light" *ngIf="_auth.isLoggedIn() == true">
           <a class="nav-link active text-light" routerLink="/profile">Profile</a>
         </li>
         <li class="nav-item active text-light" *ngIf="_auth.isLoggedIn() == true">
-          <a class="nav-link active text-light" routerLink="/profile" (click)="logout()">logout</a>
+          <a class="nav-link active text-light" routerLink="/profile" (click)="_auth.logout()">logout</a>
         </li>
       </ul>
 

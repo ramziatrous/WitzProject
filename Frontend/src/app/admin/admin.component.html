@@ -1,0 +1,39 @@
+<div class="card mt-0 p-3">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Witz</th>
+          <th>rating</th>
+          <th>user</th>
+          <th>created at :</th>
+          <th>Updated at :</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of witz; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td innerHTML="{{item.jokeText}}"></td>
+          <td>{{ item.rating }}</td>
+          <td>{{ item.idUser }}</td>
+          <td>{{ item.createdAt }}</td>
+          <td>{{ item.updatedAt }}</td>
+          <td>
+            <button (click)="delete(item._id)" class="btn text-danger">
+              <span class="material-symbols-outlined">
+                delete
+              </span>
+            </button>
+            <button class="btn text-info" [routerLink]="['/update', item._id]">
+              <span class="material-symbols-outlined">
+                edit
+              </span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

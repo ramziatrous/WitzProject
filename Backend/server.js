@@ -23,6 +23,7 @@ connectDB();
 app.use(cors());
 app.use("/jokes", router);
 app.use("/users", userRouter);
+app.use('/image', express.static('./uploads'));
 
 // Use errorHandler middleware before notFound middleware
 app.use(errorHandler);
