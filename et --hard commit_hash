@@ -1,0 +1,389 @@
+[33mcommit 97301d25c49c5ab631ce4d3b89a72196d807d6db[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 20:45:01 2023 +0100
+
+    remove curl unnecessary curl file
+
+[33mcommit 92f58923e0044d3f34d80f5a2cb4f12bbdf5228b[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 20:39:27 2023 +0100
+
+    modify upload image code
+
+[33mcommit 3af2ea733f2ccac7f25c66088677a6034a91b928[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 17:41:59 2023 +0100
+
+    added LOGIN and REGISTER Routes
+
+[33mcommit eb8fea07318d1a13fc3075ec1e232bb28a92b3c0[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 12:55:26 2023 +0100
+
+    Login User Route. Auth with JWT stored on local storage
+
+[33mcommit 8bf864ce09b18654fbb1e234d62b7b359cfd9c52[m
+Merge: a65efa7 0aa7f67
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 11:33:33 2023 +0100
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit a65efa7a5b0446f026666ac0a331703ea38638e9[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 30 11:33:09 2023 +0100
+
+    Login User Route. Auth with JWT
+
+[33mcommit 0aa7f67f71b63449d3f4ac24d742667166e7c734[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Wed Aug 30 09:28:42 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit d573922186a1653c5ae1b859cd52096228a30281[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Wed Aug 30 09:27:30 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit 7780c324707afb7e88b38af2c3a5a555890b8e4d[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Wed Aug 30 09:07:51 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit cdad5f4e7e2da48d8744cd7e10544ba332aae484[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Tue Aug 29 23:52:57 2023 +0200
+
+    tagebuch_ramzi_29.08.2023
+
+[33mcommit c7cd191ddc37f5e8853a07ccc06fa65da7d27bde[m
+Merge: 845199b 013a66d
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Tue Aug 29 23:13:59 2023 +0200
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 845199b21ef337c5b2c30c971dbd9f8e4f30cf05[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Tue Aug 29 23:12:37 2023 +0200
+
+    top10seite und bewertung Html und funktion erstelt
+
+[33mcommit 013a66d6d7e4c6c608b85b2c2a7bcfdc8bde0837[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 20:35:07 2023 +0100
+
+     please run npm install, after pull
+
+[33mcommit a2e2a5d394e8bbae03415ec3a0e185e894f34d19[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 20:03:39 2023 +0100
+
+     fixing typo bug
+
+[33mcommit e700a89de2eaf57145ad689d19f56aeab7ed4e65[m
+Merge: 5ce39f4 5a13a66
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 19:55:04 2023 +0100
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 5ce39f4ad420dd10118b38ae5b4c41f9e8828cfc[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 19:53:38 2023 +0100
+
+    new api points for user
+
+[33mcommit 5a13a66ecbe013c8346b98c56d8bfb52ce291dd9[m
+Merge: 55bfe06 51c078c
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Tue Aug 29 13:36:20 2023 +0200
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 55bfe06757bd8c16a8bed2bb2808d15f4c7b096a[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Tue Aug 29 13:35:36 2023 +0200
+
+    profile bearbeiten und rating system erstelt
+
+[33mcommit 51c078cabd76f019a6da8d72d3a3f4c68109c8bb[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 12:22:00 2023 +0100
+
+      testet all /jokes API points and all works
+
+[33mcommit a9c3a77d1407aad33e13c0a54374b362e8d28da2[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 11:43:13 2023 +0100
+
+     changing datamodels -->  jokeModel and userModel
+
+[33mcommit e34056d02d7f134b415b8361f72ed95c83b5349c[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 11:24:32 2023 +0100
+
+     changing the routes for jokes {{baseURL}}jokes/getall
+
+[33mcommit ab68076428be0eeebf8691ea9a562689bf4d3719[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Tue Aug 29 11:13:33 2023 +0100
+
+    modify updateJokeRating function
+
+[33mcommit 0c1faa9503211cf44ea5e7aa656e2d9263749b47[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Mon Aug 28 23:06:17 2023 +0200
+
+    tagebuch_ramzi_28.08.2023
+
+[33mcommit 6e9ba226eb9b06cfcac951db85fa7a35f4353f19[m
+Merge: 261690b 8464bb4
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Mon Aug 28 22:57:09 2023 +0200
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 261690b8bf2820e5c597444fcf89e4fd20c69e77[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Mon Aug 28 22:54:44 2023 +0200
+
+    login,register,404 erstelt und routes configuriert
+
+[33mcommit 8464bb449afcc9e89c2c3ec6dce82cc9f5d71c02[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Mon Aug 28 22:36:30 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit 2a9fd48281ad8123e0b270a34bb5f5b082a04ea8[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 19:16:46 2023 +0100
+
+    new PUT Method, um die Bewertungen zu aktualisieren vorhanden
+
+[33mcommit 1463e295ef02059b8445a78730727aa9aab96bfe[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 18:01:59 2023 +0100
+
+    adding middlewares
+
+[33mcommit 814739192317a56a992bc137f375f05b3ab81c61[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 13:20:18 2023 +0100
+
+    set the CORS middleware before defining the  API routes
+
+[33mcommit 7e4102028ee3985616182c950e67f31c7a5ac1b8[m
+Merge: 6b913bd 0638827
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Mon Aug 28 13:47:20 2023 +0200
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 6b913bdf9b8ebc7671dc72251de2b3834e53f065[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Mon Aug 28 13:46:44 2023 +0200
+
+    api updatet
+
+[33mcommit 0638827fe3c0b8b0e16fc5aead4a5982429a34f9[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 12:44:18 2023 +0100
+
+     updated server.js CORS Config *
+
+[33mcommit 1ebdf23f1560fd138cb82f0333f3e884443e1014[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 12:11:38 2023 +0100
+
+     updated server.js CORS Config
+
+[33mcommit aa6163e4afe1ba6381dab9763a6fcbb7dcdc2634[m
+Merge: a39c400 850425c
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 11:51:39 2023 +0100
+
+    updatet API Routes, Controllers, cleaned server.js
+
+[33mcommit a39c40095c94d88259ed651b9635261edae7638d[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Mon Aug 28 11:42:27 2023 +0100
+
+    updatet API Routes, Controllers, cleaned server.js
+
+[33mcommit 850425c0c45741fac80e08f1edcb745c5141328e[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 15:00:06 2023 +0200
+
+    tagebuch_ramzi_25.08.2023
+
+[33mcommit a53ce8b5203689af41678a81ff46be1caacfaec1[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 14:59:27 2023 +0200
+
+    tagebuch_ramzi_25.08.2023
+
+[33mcommit 3e1c4f17be968b2981946363497d87d0039f8fea[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 14:49:12 2023 +0200
+
+    verbindung zwischen backend und Frontend
+
+[33mcommit 532f841a3c207e797b6960c3c3786c42dc88e16e[m
+Merge: 8baaf72 d4643a4
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 14:24:32 2023 +0200
+
+    Merge branch 'master' of github.com:ramziatrous/WitzProject
+
+[33mcommit 8baaf72fe2237a85da2f33ddd5a236838daf2c97[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 14:21:19 2023 +0200
+
+    npm i
+
+[33mcommit 4609921a269f406620e91a527d5608d0459f622d[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Fri Aug 25 14:20:38 2023 +0200
+
+    service generiet
+
+[33mcommit d4643a4ebcaf19eeeca8d6c2ab81f6fa844a5a63[m
+Merge: 15cda22 fc8dbe7
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Fri Aug 25 13:08:10 2023 +0100
+
+    RAMZI teste das GET-RANDOM-JOKE API :)
+
+[33mcommit 15cda221900d8a547878a90ff4a777d66e1c4c59[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Fri Aug 25 13:03:53 2023 +0100
+
+    RAMZI teste das GET-RANDOM-JOKE API :)
+
+[33mcommit fc8dbe7735317c426b92c6ddc218505b67b81aba[m
+Author: emanuel <emanuel.brandl@docc.techstarter.de>
+Date:   Fri Aug 25 12:23:40 2023 +0200
+
+    CSS styling Hintergrund erstellt und navbar weiter beabeitet
+
+[33mcommit 7c2135a210f4d0d28d3c7da2c5047682a52c2e1c[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Fri Aug 25 08:23:29 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit 5f182063c283f040806a4ba4dcd09b748281d201[m
+Author: emanuel brandl <127778928+1988emanuel@users.noreply.github.com>
+Date:   Fri Aug 25 08:23:02 2023 +0200
+
+    Update tagebuch_emanuel.md
+
+[33mcommit 7b95d7d3854759baf9b56c895a302bae945f1a2e[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Thu Aug 24 21:00:04 2023 +0100
+
+    Remove node_modules from version control
+
+[33mcommit 6f1139299bb12d0becb871fd3a994a8a9891b955[m
+Merge: 753f33a b705cb0
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Thu Aug 24 20:56:01 2023 +0100
+
+    feat: Set up Express server with CRUD functionality
+    
+    - Added Node.js runtime and Express framework
+    - Implemented CRUD (Create, Read, Update, Delete) operations for jokes
+    - Used UUID to generate unique IDs for new jokes
+
+[33mcommit 753f33aa59313af4d8654215f7e488d337a06ec6[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Thu Aug 24 20:34:12 2023 +0100
+
+    feat: Set up Express server with CRUD functionality
+    
+    - Added Node.js runtime and Express framework
+    - Implemented CRUD (Create, Read, Update, Delete) operations for jokes
+    - Used UUID to generate unique IDs for new jokes
+
+[33mcommit b705cb01a6299f229671276a113a82f038b7c7d1[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Thu Aug 24 15:39:38 2023 +0200
+
+    tagebuch_ramzi_24.08.2023
+
+[33mcommit 9c349a529827c2dc5edf3be71d568dc6bfc1e8f1[m
+Author: emanuel <emanuel.brandl@docc.techstarter.de>
+Date:   Thu Aug 24 14:56:04 2023 +0200
+
+    navbar bearbeitet
+
+[33mcommit cc8dc3c7f57b61fb49890949b772cc1e3b79693a[m
+Author: emanuel <emanuel.brandl@docc.techstarter.de>
+Date:   Thu Aug 24 14:54:47 2023 +0200
+
+    Navbar bearbeitet
+
+[33mcommit 2ac81734a561746fd0583945a66badedef3cb4d1[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Thu Aug 24 14:49:07 2023 +0200
+
+    component erstelt und footer component bearbeitet
+
+[33mcommit 2b072a0ec544c3d2da47680745c84423d958eca7[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Thu Aug 24 14:48:24 2023 +0200
+
+    component erstelt und footer bearbeitet
+
+[33mcommit 0cb567f47cb4a3bbec1367819ec5567ea437c8e5[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 14:45:34 2023 +0200
+
+    tagebuch
+
+[33mcommit af3027ace39c19fba53869230fadd9796381a90d[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 13:56:50 2023 +0200
+
+    Backend init
+
+[33mcommit 74e280cb35c6aee4522df34601c8452dfd69109d[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 11:49:22 2023 +0200
+
+    1
+
+[33mcommit 536d7b317f2794401b9acb30260963506cc997e5[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 11:48:29 2023 +0200
+
+    1
+
+[33mcommit d435ca43aa4242ee8885df7f9c70f4f182be1c03[m
+Author: Nick Jabs <yabsikus@gmail.com>
+Date:   Wed Aug 23 10:18:08 2023 +0100
+
+    Hinzufügen einer Testdatei --> TEST :)
+
+[33mcommit 9dc2e67db78901f0a6bce654d0f5643380c0cf29[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 11:14:09 2023 +0200
+
+    test
+
+[33mcommit 27e57f8f0980f67899aff4492aadef5e52bec772[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 11:09:19 2023 +0200
+
+    project erstellen
+
+[33mcommit f10e595df6eeba2fbf47d09cead4366d99b4cf0a[m
+Author: Ramzi Atrous <atrous.ramzi@gmx.de>
+Date:   Wed Aug 23 11:02:37 2023 +0200
+
+    first commit
