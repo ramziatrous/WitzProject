@@ -14,6 +14,7 @@ interface Joke {
 })
 export class Top10Component implements OnInit {
   witz: any;
+  witzs: any;
 avg: any;
   constructor(private _witz: WitzService) { }
 
@@ -26,9 +27,11 @@ avg: any;
         for (let i = 0; i < this.witz.length; i++) {
           const joke = this.witz[i];
           const avg = joke.rating / ((joke.count));
-          joke.rating = avg.toFixed(1); // Update the individual joke's rating
+          joke.rating = avg.toFixed(1);
         }
          this.witz.sort((a:Joke, b:Joke) => b.rating - a.rating);
+        this.witz=this.witz.slice(0,10);
+
 
       },
       error: (err) => {

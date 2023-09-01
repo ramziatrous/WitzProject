@@ -1,0 +1,24 @@
+<div class="card mt-0 p-3">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Image</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>created at :</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of users; let i = index">
+          <td>{{ i + 1 }}</td>
+          <img style="max-width: 70px;" [src]="'http://127.0.0.1:3000/image/' + item.image" alt="">
+          <td>{{ item.username }}</td>
+          <td>{{ item.email}}</td>
+          <td>{{ item.createdAt }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

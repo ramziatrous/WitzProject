@@ -22,8 +22,11 @@
         <li class="nav-item active text-light" *ngIf="_auth.isLoggedIn() == true">
           <a class="nav-link active text-light" routerLink="/profile" (click)="_auth.logout()">logout</a>
         </li>
-        <li class="nav-item" *ngIf="_auth.isAdmin() ">
+        <li class="nav-item" *ngIf="_auth.isAdmin()==true ">
           <a class="nav-link active text-light" routerLink="/admin" >Witze</a>
+        </li>
+        <li class="nav-item" *ngIf="_auth.isAdmin()==true ">
+          <a class="nav-link active text-light" routerLink="/users" >Users</a>
         </li>
       </ul>
 
