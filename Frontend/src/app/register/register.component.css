@@ -91,3 +91,9 @@ a:hover{
   font-size: 18px;
   margin-bottom: 0;
 }
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    margin-left: 0%;
+  }
+}

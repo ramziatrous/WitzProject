@@ -8,13 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
-  token:any;
+userData: any;
   constructor( public _auth: AuthService , private router: Router) { }
 
-  ngOnInit(): void {
-  // localStorage.setItem( 'token', this.token );
-  }
-
-
+  ngOnInit(): void {}
 
 }
+
+

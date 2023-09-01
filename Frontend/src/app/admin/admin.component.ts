@@ -20,7 +20,7 @@ import Swal from 'sweetalert2';
           this.witz = res;
           for (let i = 0; i < this.witz.length; i++) {
             const joke = this.witz[i];
-            const avg = joke.rating / joke.count;
+            const avg = joke.rating / (joke.count);
             joke.rating = avg.toFixed(1); // Update the individual joke's rating
           }
 

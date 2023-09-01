@@ -19,6 +19,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { RatingModule } from 'primeng/rating';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
+import { UsersComponent } from './users/users.component';
 
 
 
@@ -34,7 +35,8 @@ import { UpdateComponent } from './update/update.component';
     Top10Component,
     NotfoundComponent,
     AdminComponent,
-    UpdateComponent
+    UpdateComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

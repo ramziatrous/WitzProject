@@ -13,7 +13,7 @@ export class ProfileComponent implements OnInit {
   witz={
     jokeText:'',
     rating: '0',
-    count:'1',
+    count:'0',
     idUser:'',
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -23,7 +23,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.userData = this._auth.getDataFromToken();
-console.log(this.userData);
+
 }
 submit(){
 
@@ -52,5 +52,4 @@ this._witz.create( this.witz ).subscribe({
 })
 
 }
-
 }

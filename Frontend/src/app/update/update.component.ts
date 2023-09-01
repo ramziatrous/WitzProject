@@ -49,6 +49,7 @@ console.log(this.witz.jokeText);
           timer: 1500
         })
         this.router.navigate(['/admin']);
+        console.log(this.newtext);
       },
       (err) => {
         console.log(err);

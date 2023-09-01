@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of witz.slice(0,10); let i = index">
+        <tr *ngFor="let item of witz; let i = index">
           <td>{{ i + 1 }}</td>
           <td innerHTML="{{item.jokeText}}"></td>
           <td>{{ item.rating }}</td>
