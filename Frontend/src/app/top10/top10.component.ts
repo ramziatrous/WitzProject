@@ -25,11 +25,11 @@ avg: any;
         this.witz = res;
         for (let i = 0; i < this.witz.length; i++) {
           const joke = this.witz[i];
-          const avg = joke.rating / joke.count;
+          const avg = joke.rating / ((joke.count));
           joke.rating = avg.toFixed(1); // Update the individual joke's rating
         }
          this.witz.sort((a:Joke, b:Joke) => b.rating - a.rating);
-        console.log(this.witz);
+
       },
       error: (err) => {
         console.log(err);

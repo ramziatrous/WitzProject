@@ -20,7 +20,7 @@ const routes: Routes = [
 
   { path: 'register', component: RegisterComponent },
 
-{ path: 'admin', component: AdminComponent},
+{ path: 'admin', canActivate:[adminGuard],component: AdminComponent},
 { path: 'update/:id', component: UpdateComponent},
   { path: '**' , component: NotfoundComponent }
 ];
