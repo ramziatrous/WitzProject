@@ -23,6 +23,7 @@ userData:any;
     localStorage.removeItem('token');
     this.router.navigate(['/home']);
     window.location.reload();
+
   }
 
   isLoggedIn(){
@@ -38,13 +39,18 @@ userData:any;
   }
 
   isAdmin(){
-    this.userData =this.getDataFromToken();
-    if(this.userData.isAdmin ==true){
-      return true;
+    if(this.isLoggedIn()){
+        this.userData =this.getDataFromToken();
+       if(this.userData.isAdmin ==true){
+           return true;
     }
     else{
       return false;
     }
+  }
+  else{
+    return false;
+  }
   }
 
   getDataFromToken(){
