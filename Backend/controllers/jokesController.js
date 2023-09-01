@@ -51,7 +51,7 @@ const addNewJoke = async (req, res) => {
   try {
     const { jokeText, idUser } = req.body;
     let rating = "0";
-    let count = "1";
+    let count = "0";
     const newJoke = new Joke({
       jokeText,
       rating,
