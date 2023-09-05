@@ -8,11 +8,11 @@ router.use(logRequest);
 
 // Jokes routes
 router.get("/getall", jokesController.getAllJokes);
-router.get("/getbyid/:id", jokesController.getById); // für das updaten
+router.get("/getbyid/:id", jokesController.getById); 
 router.get("/random", jokesController.getRandomJoke);
 router.post("/create", jokesController.addNewJoke);
-router.put("/update/:id", jokesController.updateJokeRating);
-router.put("/updatetext/:id", jokesController.updatetext); // update joketext
+router.put("/update/:id", jokesController.updateJokeRating); 
+router.put("/updatetext/:id", jokesController.updatetext); 
 router.delete("/delete/:id", jokesController.deleteJoke);
 
 //USER  routes
