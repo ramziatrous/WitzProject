@@ -1,3 +1,19 @@
+
+
+
+03.09.2023 Wochenende
+
+02.09.2023 Wochenende
+
+01.09.2023 abschluss Teambesprechung vor der letten Projektwoche und ablauf Präsentation
+
+
+31.09.2023cWitze-Webanwendung vollständig fertig gestellt, getestet und Funktionsfähig.
+
+
+30.08.2023 Vorbereitung Projektpräsentation und sicherstellung vollständigkeit aller Dokumente (Technische Doku,etc)
+
+
 29.08.2023 Angular und typeScript vertiefung mit youtube Tutorials
 
 
@@ -6,7 +22,7 @@ zusammenführung von front und end begleitet
 vorbereitung auf morgen wo ich für das frontend css code schreiben möchte
 
 
- 25.08.2023 ng g c navbar mit Frontend entwickler Rsmzi in zusammenarbeit bearbeitet 
+ 25.08.2023 ng g c navbar mit Frontend entwickler Ramzi in zusammenarbeit bearbeitet 
 
 
  24.08.2023 ng new spaßvogel components (navbar) erstelt und bearbeitet
