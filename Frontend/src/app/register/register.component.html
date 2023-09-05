@@ -12,7 +12,8 @@
           <input [(ngModel)]="user.username" name="username" type="text" placeholder="User name"  class="" >
           <input [(ngModel)]="user.email" name="email" type="email" placeholder="E-mail"  class="mt-3">
           <input  [(ngModel)]="user.password" name="password" type="password" placeholder="Password"  class="mt-3">
-          <input type="file" (change)="select($event)" placeholder="image"  class="mt-3" >
+          <input type="file" (change)="select($event)" placeholder="image" accept="image/*" class="mt-3" >
+
 
           <button     class=""  (click)="register()">Signup</button>
 

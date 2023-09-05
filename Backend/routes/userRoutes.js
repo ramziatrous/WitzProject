@@ -26,7 +26,8 @@ const storage = multer.diskStorage({
 userRouter.post("/register",upload.single('image'),userController.registerUser);
 userRouter.post("/login", userController.authUser);
 userRouter.get("/getall", userController.getAll);
-
+userRouter.put("/update/:id", userController.update);
+userRouter.delete("/delete/:id", userController.deleteuser);
 // Protected route - Requires token for access
 userRouter.post("/logout", verifyToken, userController.logoutUser);
 

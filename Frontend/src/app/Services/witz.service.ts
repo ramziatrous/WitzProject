@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class WitzService {
 
   constructor(private http : HttpClient) { }
-  url = 'http://backend.atrous.de:3000/jokes/';
+  url = 'https://backends.atrous.de/jokes/';
   create(witz: any){
     return this.http.post( this.url +'create' , witz);
   }

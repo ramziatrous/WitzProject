@@ -31,3 +31,20 @@ Html und css von login , register seiten fertig
 -verbundung die update und getall endpoint api mit frontend im service
 -testing die bewertungs system
 -test die top10 witzen
+30.08.2023
+-verbindung die authontification request von login und register mit frontend
+-test ein user zu erstellen und login
+31.08.2023
+-witze und user seite erstellen
+-configure die user und witze seiten das die sind nur bei admin sichtbar
+01.09.2023
+-beschprechung mit team uber deployment
+-docker file erstellen
+-docker image erstellen und auf AWS ECR pushen
+04.09.2023
+-AWS ECS Cluster und Task Definition erstelt 
+-aus AWS Certification Manager ein SSL certificate erstelt und mit domain name in Aws Route 53 bestätig
+-Application LoadBalencer und Target Group erstelt
+-ein Service mit LB in der ECS Cluster erstelt
+05.09.2023
+-Domain name mit LB verbinden über DNS

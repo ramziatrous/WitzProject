@@ -102,4 +102,25 @@ const logoutUser = async (req, res) => {
   }
 };
 
-export { authUser, registerUser, logoutUser, getAll };
+const update = async (req,res)=>{
+  try {
+      let {id}=req.params;
+      let data = req.body;
+      let result = await User.findByIdAndUpdate({_id:id},data);
+      res.status(200).send(result);
+  }
+  catch(error) {
+      res.status(500).send(error);
+  }
+}
+const deleteuser = async (req, res) => {
+  try {
+    let result = await User.findByIdAndDelete({ _id: req.params.id });
+    res.status(200).send(result);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+
+export { authUser, registerUser, logoutUser, getAll,update,deleteuser };

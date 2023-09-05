@@ -6,30 +6,26 @@ import connectDB from "./config/db.js";
 import { router } from "./routes/apiRoutes.js";
 import { userRouter } from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middlewares/errorHandlers.js";
-import path from "path";
-
 dotenv.config();
-const port = process.env.PORT || 3000;
+const port = 80;
 
 const app = express();
-
+const corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
 connectDB();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use("/jokes", router);
 app.use("/users", userRouter);
-app.use('/image', express.static('./uploads'));
-
-// Get the directory name of the current module
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
-// Serve static files from the "uploads" directory
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-console.log("Upload path:", path.join(__dirname, "uploads"));
+app.use('/image', cors(corsOptions), express.static('./uploads'));
 
 app.use(errorHandler);
 app.use(notFound);
