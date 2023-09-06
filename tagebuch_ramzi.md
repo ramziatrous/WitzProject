@@ -48,3 +48,5 @@ Html und css von login , register seiten fertig
 -ein Service mit LB in der ECS Cluster erstelt
 05.09.2023
 -Domain name mit LB verbinden über DNS
+06.09.2023
+AWS Deployment diagram erstelt
