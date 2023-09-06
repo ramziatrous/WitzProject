@@ -1,4 +1,7 @@
+06.09.2023 Präsentationsablauf planen und strukturieren / letzetes testing vor Präsentation überwachen.
 
+
+05.09.2023 Technische Dokumentation,Projekt-Präsentation fertigstellen.
 
 
 04.09.2023 Krankgeschrieben dennoch nach aktuellen Status von Deployment bei Ramzi informiert.
