@@ -21,12 +21,13 @@ avg: any;
 
   ngOnInit(): void {
 
-    this._witz.getall().subscribe({
+    this._witz.getAll().subscribe({
       next: (res) => {
         this.witz = res;
         for (let i = 0; i < this.witz.length; i++) {
           const joke = this.witz[i];
-          const avg = joke.rating / ((joke.count));
+          let avg = joke.rating / ((joke.count));
+           avg=isNaN(avg) ? 0 : avg;
           joke.rating = avg.toFixed(1);
         }
          this.witz.sort((a:Joke, b:Joke) => b.rating - a.rating);

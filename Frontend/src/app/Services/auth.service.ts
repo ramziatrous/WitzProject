@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   constructor(private http:HttpClient ,private router:Router) { }
 userData:any;
-  private url = 'https://backends.atrous.de/users/';
+  private url = 'http://127.0.0.1:3000/users/';
 
 
   register(user:any){

@@ -20,6 +20,7 @@ import { RatingModule } from 'primeng/rating';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
 import { UsersComponent } from './users/users.component';
+import { HashLocationStrategy ,LocationStrategy } from '@angular/common';
 
 
 
@@ -50,7 +51,7 @@ import { UsersComponent } from './users/users.component';
     RatingModule,
 
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

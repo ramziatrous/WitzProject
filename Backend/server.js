@@ -7,7 +7,7 @@ import { router } from "./routes/apiRoutes.js";
 import { userRouter } from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middlewares/errorHandlers.js";
 dotenv.config();
-const port = 80;
+const port = 3000;
 
 const app = express();
 const corsOptions = {

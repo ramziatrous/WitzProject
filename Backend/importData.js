@@ -27,7 +27,7 @@ const insertData = async () => {
       (user) => !existingUserEmails.includes(user.email)
     );
 
-    if (newJokes.length === 0 && newUsers.length === 0) {
+    if (newJokes.length === 0 ) {
       console.log("No new data to insert.");
       process.exit();
     }

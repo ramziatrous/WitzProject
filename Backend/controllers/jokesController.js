@@ -3,7 +3,7 @@ import { Joke } from "../models/jokeModel.js";
 const getAllJokes = async (req, res) => {
   try {
     const jokes = await Joke.find();
-    res.json({ jokes });
+    res.json(jokes);
   } catch (error) {
     console.error("Error getting all jokes:", error);
     res.status(500).json({ message: "Internal server error" });
@@ -20,7 +20,7 @@ const getById = async (req, res) => {
       return res.status(404).json({ message: "Joke not found" });
     }
 
-    res.json({ joke });
+    res.json(joke );
   } catch (error) {
     console.error("Error getting joke by ID:", error);
     res.status(500).json({ message: "Internal server error" });
@@ -46,7 +46,7 @@ const getRandomJoke = async (req, res) => {
     } while (usedJokes.has(randomJoke._id));
 
     usedJokes.add(randomJoke._id);
-    res.json({ randomJoke });
+    res.json(randomJoke );
   } catch (error) {
     console.error("Error fetching random joke:", error);
     res.status(500).json({ message: "Internal server error" });

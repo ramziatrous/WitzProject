@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class WitzService {
 
   constructor(private http : HttpClient) { }
-  url = 'https://backends.atrous.de/jokes/';
+  url = 'http://127.0.0.1:3000/jokes/';
   create(witz: any){
     return this.http.post( this.url +'create' , witz);
   }
@@ -17,7 +17,7 @@ export class WitzService {
   getRandom(){
     return this.http.get( this.url + 'random');
   }
-  getall(){
+  getAll(){
     return this.http.get( this.url + 'getall');
   }
   getById( id: any ){

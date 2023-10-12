@@ -25,9 +25,11 @@ export class HomeComponent implements OnInit  {
     this._witz.getRandom().subscribe({
       next: (res) => {
         this.witz = res;
+        console.log(this.witz);
         this.witztxt = this.witz.jokeText;
+        console.log(this.witztxt);
         this.avg=parseInt(this.witz.rating)/parseInt(this.witz.count);
-        this.value = this.avg;
+        this.value = isNaN(this.avg) ? 0 : this.avg;
       },
       error: (err) => {
         console.log(err);
@@ -57,7 +59,7 @@ export class HomeComponent implements OnInit  {
           this.witz = res;
           this.witztxt = this.witz.jokeText;
           this.avg=parseInt(this.witz.rating)/parseInt(this.witz.count);
-          this.value = this.avg;
+          this.value = isNaN(this.avg) ? 0 : this.avg;
 
 
         },
