@@ -30,7 +30,7 @@ Wenn die Stunden dahin schleichen und die Tage lang sind, brauche ich ein wenig 
 
 ***5.Interaktionsmöglichkeit***
 
--Hinzufügen einer Option, um Witze zu bewerten oder eigene Witze beizutragen, um die Nutzerinteraktion zu fördern.
+- Hinzufügen einer Option, um Witze zu bewerten oder eigene Witze beizutragen, um die Nutzerinteraktion zu fördern.
 
 ***6.Verhältnis von Witzen***
 
