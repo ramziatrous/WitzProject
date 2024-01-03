@@ -2,9 +2,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import colors from "colors";
 import { germanJokes } from "./data/jokes.js";
-import { users } from "./data/users.js";
 import { Joke } from "./models/jokeModel.js";
-import { User } from "./models/userModel.js";
+// import { User } from "./models/userModel.js"; // Benutzer-Modell entfernt
 
 import connectDB from "./config/db.js";
 
@@ -18,16 +17,17 @@ connectDB();
 const insertData = async () => {
   try {
     const existingJokeIds = await Joke.distinct("_id");
-    const existingUserEmails = await User.distinct("email");
+    // const existingUserEmails = await User.distinct("email"); // Benutzer entfernt
 
     const newJokes = germanJokes.filter(
       (joke) => !existingJokeIds.includes(joke._id)
     );
-    const newUsers = users.filter(
-      (user) => !existingUserEmails.includes(user.email)
-    );
+    // const newUsers = users.filter(
+    //   (user) => !existingUserEmails.includes(user.email)
+    // ); // Benutzer entfernt
 
-    if (newJokes.length === 0 && newUsers.length === 0) {
+    if (newJokes.length === 0 /* && newUsers.length === 0 */) {
+      // Benutzer entfernt
       console.log("No new data to insert.");
       process.exit();
     }
@@ -37,17 +37,7 @@ const insertData = async () => {
       console.log(`${createdJokes.length} new jokes inserted.`);
     }
 
-    if (newUsers.length > 0) {
-      const createdUsers = await User.insertMany(newUsers);
-
-      // Create admin user only if it doesn't exist
-      if (!existingUserEmails.includes("admin@email.com")) {
-        const adminUser = createdUsers[0]._id;
-        console.log(`${createdUsers.length} new users inserted.`);
-      } else {
-        console.log("Admin user already exists.");
-      }
-    }
+    // Benutzer-Teil entfernt
 
     console.log("Data Inserted".green.inverse);
     process.exit();
